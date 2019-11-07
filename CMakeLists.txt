@@ -37,13 +37,15 @@ target_include_directories(ViconDataStreamSDK_CPP PUBLIC
   Vicon/CrossMarket/DataStream
   Vicon/CrossMarket
 )
-
 target_link_libraries(ViconDataStreamSDK_CPP PUBLIC
   Boost::system
   Boost::thread
   Boost::timer
   pthread
 )
+# All users of this library will need at least C++14
+target_compile_features(modern_library PUBLIC cxx_std_14)
+
 
 # Declare an executable
 
