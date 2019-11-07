@@ -24,7 +24,7 @@ add_library(ViconDataStreamSDK_CPP SHARED
   Vicon/CrossMarket/DataStream/ViconDataStreamSDK_CPP/DataStreamClient.cpp
   Vicon/CrossMarket/DataStream/ViconDataStreamSDK_CPP/DataStreamRetimingClient.cpp
   # ViconDataStreamSDKCore
-  Vicon/CrossMarket/DataStream/ViconDataStreamSDKCore/AxisMapping.cpp  
+  Vicon/CrossMarket/DataStream/ViconDataStreamSDKCore/AxisMapping.cpp
   Vicon/CrossMarket/DataStream/ViconDataStreamSDKCore/ClientUtils.cpp
   Vicon/CrossMarket/DataStream/ViconDataStreamSDKCore/CoreClient.cpp
   Vicon/CrossMarket/DataStream/ViconDataStreamSDKCore/RetimerUtils.cpp
@@ -46,6 +46,7 @@ target_link_libraries(ViconDataStreamSDK_CPP PUBLIC
 # All users of this library will need at least C++14
 target_compile_features(ViconDataStreamSDK_CPP PUBLIC cxx_std_14)
 
+target_compile_options(ViconDataStreamSDK_CPP PRIVATE -Wno-unknown-pragmas -Wno-unused-function -Wno-unused-but-set-variable)
 
 # Declare an executable
 

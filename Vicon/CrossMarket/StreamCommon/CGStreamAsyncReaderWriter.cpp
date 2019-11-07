@@ -81,7 +81,7 @@ void VCGStreamAsyncReaderWriter::OnBufferHeaderRead(  const boost::system::error
     return;
   }
 
-  ViconCGStreamType::UInt32 BlockLength;
+  ViconCGStreamType::UInt32 BlockLength = 0;
   i_rBuffer.SetOffset( sizeof( ViconCGStreamType::Enum ) );
   i_rBuffer.Read( BlockLength );
   i_rBuffer.SetLength( i_rBuffer.Length() + BlockLength );
