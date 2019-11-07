@@ -44,7 +44,7 @@ target_link_libraries(ViconDataStreamSDK_CPP PUBLIC
   pthread
 )
 # All users of this library will need at least C++14
-target_compile_features(modern_library PUBLIC cxx_std_14)
+target_compile_features(ViconDataStreamSDK_CPP PUBLIC cxx_std_14)
 
 
 # Declare an executable
